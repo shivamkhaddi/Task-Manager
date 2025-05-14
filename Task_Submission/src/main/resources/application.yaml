@@ -1,0 +1,28 @@
+
+
+server:
+  port: 8003
+
+spring:
+  application:
+    name: TASK-SUBMISSION
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:mysql://${MYSQL.HOST:localhost}:3306/Task_Submission
+    username: root
+    password: Khaddi@12
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8004/eureka/
